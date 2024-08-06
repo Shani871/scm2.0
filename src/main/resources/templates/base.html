@@ -1,6 +1,21 @@
-<div th:fragment="parent(x,y)">
-    <h1>This is  parent  fragment</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quisquam in dignissimos sequi enim nihil aliquam perspiciatis, fuga ea cupiditate.</p>
-    <h2>value of x is <span th:text="${x}"></span></h2>
-    <h2>value of y is <span th:text="${y}"></span></h2>
-</div>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Template</title>
+</head>
+<body>
+    <!-- Fragment Definition -->
+    <div th:fragment="parent(one, two)">
+        <p th:text="'First parameter: ' + ${one}"></p>
+        <p th:text="'Second parameter: ' + ${two}"></p>
+    </div>
+    <div th:fragment="text(x,y)">
+        <p th:text="'Hello: ' + ${x}"></p>
+        <p th:text="'Hello: ' + ${y}"></p>
+        <h1> test test </h1>
+
+    </div>
+</body>
+</html>

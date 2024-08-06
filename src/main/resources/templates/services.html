@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
 </head>
 <body>
-    <h1>This is services Page </h1>
+    <h1>This is services Page</h1>
+    <!-- Corrected Fragment Insertion -->
+    <div th:insert="~{base :: parent('One','two')}"></div>
+    <div th:insert="~{base :: text('x','y')}"></div>
 </body>
 </html>
